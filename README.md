@@ -38,6 +38,7 @@ Start a new session afterwards. Then say something like "Make an Instagram ad fr
 | `workflows/` | Onboarding, creation, variations, resizing, editing |
 | `references/` | Brand profile, creative direction, Higgsfield tool map, compositing, formats, quality check |
 | `scripts/compose.js` | Renders exact text and logos at exact pixels |
+| `assets/studio.html`, `scripts/build_studio.js`, `scripts/read_brand.js` | The Studio page: one link for the whole workflow, from brand URL to final formats |
 | `TESTING.md` | What was tested and what was not |
 
 ## Maintenance

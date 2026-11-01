@@ -38,6 +38,14 @@ The baseline was strong, and also put text on after generation and handled the b
 
 After this round, two fixes were made to onboarding. The two affected cases were re-run with the skill only. The inaccessible URL case then scored 4/4, as the reply stopped and asked for a source. The onboarding case asked one question, but a rights check rather than format, which is intended for a government identity. Its case was not re-graded formally, and the other two cases were not re-run.
 
+## Studio page
+
+The full click-through (brand analysis, directions, copy, cost check, generation, extending and recomposing formats, background edit with product restore, font failure keeping the paid image) passed in a local browser, against simulated Higgsfield, Claude and storage calls. The brand reader ran for real against a public site. The compositor ran for real in the earlier tests. Reply shapes for media import, media listing and sandbox errors were checked with real calls.
+
+Real brand files (woff2 fonts and SVG logos) rendered correctly through the compositor's page in a local browser. Claude links are refused at once with guidance, since the page cannot open them; a design system saved in Claude is imported from chat instead.
+
+Not tested: the chat import following its written steps in a new session, live arrival of imported projects on an open page, the published page making real calls, permission prompts, saving to the page's real storage, and direct upload from a device. That upload route may not work, so the page falls back to an image link or the user's Higgsfield uploads.
+
 ## Requirement coverage
 
 | Requirement | Evidence |

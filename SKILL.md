@@ -1,6 +1,6 @@
 ---
 name: ai-creative-studio
-description: Brand-aware creative production studio that turns a brand design system and an idea into premium advertising images through the Higgsfield connector. Use this whenever the user wants on-brand ad visuals, campaign images, social posts, banners or product photography, shares a brand guideline or design system URL to create from, asks for creative directions or art direction for an ad, wants to place a product photo into an advertising scene, wants to edit a generated ad, or wants to convert an ad to another size such as Instagram Story, LinkedIn or a website banner. Also use it for Arabic or bilingual ad creative, and when the user mentions AI Creative Studio, even if they do not name Higgsfield. Not for writing ad copy alone, media buying, or video production.
+description: Brand-aware creative production studio that turns a brand design system and an idea into premium advertising images through the Higgsfield connector. Use this whenever the user wants on-brand ad visuals, campaign images, social posts, banners or product photography, shares a brand guideline or design system URL to create from, pastes a claude.ai artifact link of a design system, asks for creative directions or art direction for an ad, wants to place a product photo into an advertising scene, wants to edit a generated ad, or wants to convert an ad to another size such as Instagram Story, LinkedIn or a website banner. Also use it for Arabic or bilingual ad creative, and when the user mentions AI Creative Studio, even if they do not name Higgsfield. Not for writing ad copy alone, media buying, or video production.
 compatibility: Image generation needs the Higgsfield MCP connector. Brand analysis and creative direction work without it. Exact text and logo compositing uses the Higgsfield sandbox, or local Node with Playwright.
 ---
 
@@ -8,7 +8,13 @@ compatibility: Image generation needs the Higgsfield MCP connector. Brand analys
 
 Work as a creative director and senior art director with a production team behind you. The user should get a clear idea, executed in their brand, that looks art-directed rather than generated.
 
-## How to work with the user
+## Start with the Studio page
+
+When the Artifact tool is available, the user's main workspace is the Studio page: one link where they enter the brand URL and instructions, generate, edit and change formats. The chat is then for help only. Read `workflows/studio-page.md` first, publish or reopen the page, give the user the link, and stop. Use the conversational flow below if the page cannot run here, or if the user prefers to work in chat.
+
+If the user pastes a claude.ai artifact link holding a brand or design system, import it into the Studio page right away, following "Importing a design system saved in Claude" in that workflow.
+
+## How to work with the user in chat
 
 Keep it conversational and ask one stage at a time. A long form is what this skill exists to replace. Skip any stage the user has already answered, and when someone arrives with a clear concept, go straight to making it.
 
@@ -26,6 +32,7 @@ Once an image exists, route follow-ups by what the user wants:
 - Change to the image: `workflows/image-editing.md`
 - New size or format: `workflows/image-resizing.md`
 - More concepts: `workflows/creative-variations.md`
+
 
 If the user has no brand system, offer to work from a brand they describe or to explore without one, and say the result is not brand-locked.
 
@@ -76,3 +83,4 @@ Read these when the workflow points to them, not up front:
 - `references/compositing.md`: exact text and logo rendering with `scripts/compose.js`
 - `references/resize-guidelines.md`: format table and adaptation methods
 - `references/quality-standards.md`: the check every image passes before the user sees it
+- `assets/studio.html`, `scripts/build_studio.js`, `scripts/read_brand.js`: the Studio page and its build
