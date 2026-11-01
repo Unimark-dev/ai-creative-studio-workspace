@@ -12,11 +12,21 @@ No API keys, local paths or brand details are stored in the skill.
 
 ## Install
 
-**Claude Code, personal:** copy this folder to `~/.claude/skills/ai-creative-studio/`.
+The repository name differs from the skill name, so set the folder name when you clone.
 
-**Claude Code, one project:** copy it to `.claude/skills/ai-creative-studio/` in the project.
+**Claude Code, personal:**
 
-**Claude apps:** upload `ai-creative-studio.skill` where your plan allows custom skills.
+```bash
+git clone https://github.com/Unimark-dev/ai-creative-studio-workspace.git ~/.claude/skills/ai-creative-studio
+```
+
+**Claude Code, one project:** run this from the project folder:
+
+```bash
+git clone https://github.com/Unimark-dev/ai-creative-studio-workspace.git .claude/skills/ai-creative-studio
+```
+
+**Claude apps:** put these files in a folder named `ai-creative-studio`, zip that folder, and upload it where your plan allows custom skills.
 
 Start a new session afterwards. Then say something like "Make an Instagram ad from our brand guide at <URL>", or just mention AI Creative Studio.
 
@@ -28,7 +38,6 @@ Start a new session afterwards. Then say something like "Make an Instagram ad fr
 | `workflows/` | Onboarding, creation, variations, resizing, editing |
 | `references/` | Brand profile, creative direction, Higgsfield tool map, compositing, formats, quality check |
 | `scripts/compose.js` | Renders exact text and logos at exact pixels |
-| `evals/` | Test cases (not included in the packaged `.skill`) |
 | `TESTING.md` | What was tested and what was not |
 
 ## Maintenance
